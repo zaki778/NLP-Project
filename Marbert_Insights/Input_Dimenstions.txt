@@ -1,0 +1,10 @@
+Length of dataset_train: 2278
+
+Shape of input_ids tensor in dataset_train: torch.Size([2278, 41]):
+Shape of attention_mask tensor in dataset_train: torch.Size([2278, 41]):
+
+The specific values of 2278 and 41 may vary based on your dataset and how it was preprocessed. The number of samples (2278) corresponds to the number of rows or instances in your training dataset,
+while the sequence length (41) represents the length of the input sequences after preprocessing.
+
+
+Shape of labels tensor in dataset_train: torch.Size([2278, 11])

@@ -118,4 +118,6 @@ def preprocess(datapath):
 
 
 
+data = preprocess("Datasets/2018-E-c-Ar-test-gold.xlsx")
+data.to_excel("preprocessed_data_test.xlsx")
 

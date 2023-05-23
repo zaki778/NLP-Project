@@ -5,3 +5,5 @@
 \full_uni_sg_100_twitter
 \GRU_Model_Final
 \LSTM_Model_Final
+*.pth
+*.crdownload
