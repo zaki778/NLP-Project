@@ -67,6 +67,23 @@ def remove_punctuation(text):
     return res
 
 
+def preprocess_sentence(sentence):
+
+    digits_pattern = r'\d+'
+    english_pattern = r'\b[A-Za-z]+\b'
+    stop_words = set(stopwords.words('arabic'))
+
+    sentence = re.sub(english_pattern, '', str(sentence))
+    sentence = re.sub(digits_pattern, '', str(sentence))
+    sentence = remove_stop_words(sentence)
+    sentence = remove_diacritics(sentence)
+    sentence = normalize_arabic(sentence)
+    sentence = remove_emojis(sentence)
+    sentence = remove_non_arabic(sentence)
+    sentence = remove_punctuation(sentence)
+    return sentence
+
+
 # Read the dataset
 def preprocess(datapath):
     data = pd.read_excel(datapath)
@@ -117,7 +134,4 @@ def preprocess(datapath):
     return data
 
 
-
-data = preprocess("Datasets/2018-E-c-Ar-test-gold.xlsx")
-data.to_excel("preprocessed_data_test.xlsx")
 
