@@ -6,4 +6,4 @@
 \GRU_Model_Final
 \LSTM_Model_Final
 *.pth
-*.crdownload
+*.pt
